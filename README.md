@@ -1,2 +1,0 @@
-# SoftwareEngineeringGame
-Unity Game Project
