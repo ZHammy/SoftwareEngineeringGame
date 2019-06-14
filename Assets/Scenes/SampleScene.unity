@@ -746,7 +746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e61e7860f324e8146ae87fd7eb78dc6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 7011923457265205227, guid: 1b05ff66d9f32b7409abf7586675f8d8, type: 3}
+  enemy: {fileID: 8675024566742759817, guid: 06a8a5003e755bd4a8485ee4197a704e, type: 3}
   spawnPoints:
   - {fileID: 386566989}
   - {fileID: 2093219342}
@@ -799,6 +799,7 @@ GameObject:
   - component: {fileID: 1767645630}
   - component: {fileID: 1767645632}
   - component: {fileID: 1767645633}
+  - component: {fileID: 1767645634}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -881,7 +882,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  health: 10
   healthDisplay: {fileID: 1044620183}
 --- !u!50 &1767645631
 Rigidbody2D:
@@ -917,6 +917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1683390171976992586, guid: 584445dd33da4034e9c3df9ef4af9522, type: 3}
+  coolDownTime: 0.25
 --- !u!58 &1767645633
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -933,6 +934,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.09
+--- !u!114 &1767645634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767645627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 360b9ef2a1bd9cc49bec3efc7a1e0a51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 3
+  curHP: -1
+  deathEffect: {fileID: 6363058139739862052, guid: 7604ae051367211408f28554ed422419,
+    type: 3}
 --- !u!1 &1861944822
 GameObject:
   m_ObjectHideFlags: 0

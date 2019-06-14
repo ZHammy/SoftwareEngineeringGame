@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Projectile
+  - BoundryWall
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -41,4 +43,25 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 2345401253
+    locked: 0
+  - name: Bullets
+    uniqueID: 2575008763
+    locked: 0
+  - name: Enemies
+    uniqueID: 1320856053
+    locked: 0
+  - name: Items
+    uniqueID: 10089755
+    locked: 0
+  - name: Walls
+    uniqueID: 3720971221
+    locked: 0
+  - name: Middleground
+    uniqueID: 996375939
+    locked: 0
+  - name: Background
+    uniqueID: 2398361241
     locked: 0

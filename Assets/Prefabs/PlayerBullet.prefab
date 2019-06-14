@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9196976799112731403}
   - component: {fileID: 4802701588366045745}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: PlayerBullet
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,7 +95,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  enemy: {fileID: 7011923457265205227, guid: 1b05ff66d9f32b7409abf7586675f8d8, type: 3}
+  isPlayerShot: 0
+  damage: 1
 --- !u!58 &9196976799112731403
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -106,7 +107,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
