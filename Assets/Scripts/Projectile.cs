@@ -24,12 +24,16 @@ public class Projectile : MonoBehaviour
 
         if (isPlayerShot)
         {
+            //When speed is negative, the function used for moving (move Towards) will never stop.  This also makes the bullet move in the wrong direction
+            //To compensate, invert the direction and make speed -1 so the bullet goes in the intended direction forever.
             direction = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position-Camera.main.ScreenToWorldPoint(Input.mousePosition);
             speed *= -1;
         }
         //if the bullet is from an enemy, aim the shot at the player
         else
-        { 
+        {
+            //When speed is negative, the function used for moving (move Towards) will never stop.  This also makes the bullet move in the wrong direction
+            //To compensate, invert the direction and make speed -1 so the bullet goes in the intended direction forever.
             direction = transform.position -GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position;
             speed *= -1;
         }
