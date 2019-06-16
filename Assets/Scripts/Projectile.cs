@@ -24,23 +24,25 @@ public class Projectile : MonoBehaviour
 
         if (isPlayerShot)
         {
-            direction = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            direction = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position-Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            speed *= -1;
         }
         //if the bullet is from an enemy, aim the shot at the player
         else
-        {
-            direction = Vector2.MoveTowards(transform.position, GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position, speed * Time.deltaTime);
-        }   
+        { 
+            direction = transform.position -GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position;
+            speed *= -1;
+        }
+
+        //Despawn the bullet after 10 seconds to prevent memory leak
+        Destroy(gameObject,10f);
 
     }
 
     private void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, direction, speed * Time.deltaTime);
-        if (Vector2.Distance(transform.position, direction) == 0)
-        {
-            Destroy(gameObject);
-        }
+
     }
 
 

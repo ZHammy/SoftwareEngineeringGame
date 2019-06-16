@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-
+        transform.position = Vector2.MoveTowards(transform.position, playerPos.position, speed * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

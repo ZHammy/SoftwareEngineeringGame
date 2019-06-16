@@ -916,8 +916,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bbf821741bdba74ab4baf324fe8bbaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1683390171976992586, guid: 584445dd33da4034e9c3df9ef4af9522, type: 3}
-  coolDownTime: 0.25
+  bullet: {fileID: 1683390171976992586, guid: e1b06df75495bac4590189ddac6a6b07, type: 3}
+  coolDownTime: 0.01
 --- !u!58 &1767645633
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -946,7 +946,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 360b9ef2a1bd9cc49bec3efc7a1e0a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 3
+  maxHP: 20000
   curHP: -1
   deathEffect: {fileID: 6363058139739862052, guid: 7604ae051367211408f28554ed422419,
     type: 3}
